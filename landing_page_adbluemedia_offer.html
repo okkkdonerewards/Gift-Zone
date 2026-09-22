@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Special Reward</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;padding:24px 16px;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(180deg,#fff8dc,#ffedaa);color:#666}
+.card{max-width:620px;margin:auto;background:#fff;border-radius:44px;overflow:hidden;box-shadow:0 12px 35px rgba(180,130,0,.18)}
+.top{background:linear-gradient(90deg,#ffad05,#ff9500);color:white;text-align:center;font-weight:700;font-size:23px;padding:19px 10px}
+.content{text-align:center;padding:32px 38px 44px}
+.gift{font-size:105px;line-height:1;margin-bottom:18px}
+h1{margin:0;color:#df7900;font-size:52px;font-weight:500}
+.subtitle{font-size:24px;line-height:1.6;margin:30px 0;color:#666}
+.reward{border:3px dashed #e5a719;border-radius:32px;background:linear-gradient(135deg,#fff2b5,#ffe18a);padding:28px 15px;margin:24px 0}
+.reward-title{font-size:23px;color:#765617;margin-bottom:12px}
+.claim{font-size:48px;color:#d97900;font-weight:500}
+.timer{font-size:42px;font-weight:700;color:#cf2e2e;margin:32px 0 24px}
+.btn{display:block;text-decoration:none;color:#fff;font-size:27px;font-weight:700;background:linear-gradient(90deg,#ff9f00,#ff7200);padding:23px 12px;border-radius:28px;box-shadow:0 9px 22px rgba(255,132,0,.3)}
+.note{font-size:18px;line-height:1.5;color:#999;margin:26px 4px 0}
+@media(max-width:480px){.content{padding:28px 24px 38px}h1{font-size:43px}.subtitle{font-size:21px}.claim{font-size:39px}.btn{font-size:22px}}
+</style>
+</head>
+<body>
+<div class="card">
+<div class="top">🎉 LIMITED-TIME REWARD</div>
+<div class="content">
+<div class="gift">🎁</div>
+<h1>Special Reward</h1>
+<div class="subtitle">Congratulations! Your reward may be waiting.<br>Tap the button below to continue.</div>
+<div class="reward"><div class="reward-title">YOUR REWARD</div><div class="claim">🎁 CLAIM YOUR<br>GIFT</div></div>
+<div class="timer" id="timer">04:59</div>
+<a class="btn" href="https://app.trcefy.com/click?pid=2&offer_id=23755&sub2=u818651&sub5=s1SUBID1HERE">CLAIM REWARD NOW 🚀</a>
+<div class="note">By continuing, you will be redirected to the offer page to complete the required steps. Availability and eligibility may vary.</div>
+</div>
+</div>
+<script>
+let seconds=299;
+const timer=document.getElementById("timer");
+setInterval(function(){
+  if(seconds>0){seconds--;}
+  const m=String(Math.floor(seconds/60)).padStart(2,"0");
+  const s=String(seconds%60).padStart(2,"0");
+  timer.textContent=m+":"+s;
+},1000);
+</script>
+</body>
+</html>
